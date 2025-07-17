@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 10000;
 let currentKey = generateKey();
 
 function generateKey() {
-    return 'VELOCITY-' + Math.random().toString(36).substring(2, 10).toUpperCase();
+    return 'PHAZE-' + Math.random().toString(36).substring(2, 10).toUpperCase();
 }
 
 setInterval(() => {
@@ -15,7 +15,7 @@ setInterval(() => {
 }, 3 * 60 * 60 * 1000); // every 3 hours
 
 app.get('/', (req, res) => {
-    res.send("Velocity Key API is running.");
+    res.send("Phaze Key API is running.");
 });
 
 app.get('/key', (req, res) => {
